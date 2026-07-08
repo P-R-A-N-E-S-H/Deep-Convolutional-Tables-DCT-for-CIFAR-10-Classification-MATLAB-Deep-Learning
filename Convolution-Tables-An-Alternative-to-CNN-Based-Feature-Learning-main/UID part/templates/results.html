@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results - Deep Learning Model Comparison</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Deep Learning Model Comparison</h1>
+    <p>CNNs vs FCNNs vs Convolution Tables</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('intro') }}">Introduction</a></li>
+      <li><a href="{{ url_for('dataset') }}">Dataset</a></li>
+      <li><a href="{{ url_for('methodology') }}">Methodology</a></li>
+      <li><a href="{{ url_for('results') }}">Results</a></li>
+      <li><a href="{{ url_for('conclusion') }}">Conclusion</a></li>
+      <li><a href="{{ url_for('references') }}">References</a></li>
+    </ul>
+  </nav>
+  
+
+  <main>
+    <section>
+      <h1>Performance Comparison</h1>
+      <p>Our experiments revealed interesting performance patterns across the three architectures. 
+         The traditional CNN achieved 89% accuracy on CIFAR-10, maintaining its reputation for 
+         strong performance in image classification tasks. The FCNN reached 82%, while our 
+         Convolution Table implementation achieved a promising 87% accuracy.</p>
+      
+      <div class="results-img">
+        <img src="static/images/cnn_results.jpg" alt="CNN Performance Results">
+        <img src="static/images/FCNNperformance_results.jpg" alt="FCNN Performance Results">
+        <img src="static/images/ct_results.png" alt="CT Performance Results">
+      </div>
+    </section>
+
+    <section>
+      <h1>Classification Accuracy</h1>
+      <p>The confusion matrices below provide deeper insight into each model's classification performance,
+         revealing where each architecture excels and struggles with particular classes.</p>
+      
+      <div class="results-img">
+        <img src="static/images/fcnn_confusion_matrix.png" alt="FCNN Confusion Matrix">
+        <img src="static/images/TraditionalCNN_confusionmatrix.jpg" alt="Traditional CNN Confusion Matrix">
+        <img src="static/images/CT_confusionmatrix.jpg" alt="CT Confusion Matrix">
+      </div>
+    </section>
+
+    <section>
+      <h1>Training Progression</h1>
+      <p>The training graphs illustrate the convergence characteristics of each model,
+         with CNNs typically converging faster while CTs showed comparable final performance
+         with optimized parameters.</p>
+      
+      <div class="results-img">
+        <img src="static/images/graph.png" alt="Training Progress Graph">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Learning Project</p>
+  </footer>
+</body>
+</html>

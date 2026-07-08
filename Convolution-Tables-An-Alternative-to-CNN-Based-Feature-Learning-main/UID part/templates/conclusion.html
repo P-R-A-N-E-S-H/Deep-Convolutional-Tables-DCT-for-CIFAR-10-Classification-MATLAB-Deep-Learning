@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conclusion - Deep Learning Model Comparison</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Deep Learning Model Comparison</h1>
+    <p>CNNs vs FCNNs vs Convolution Tables</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}" class="active">Home</a></li>
+      <li><a href="{{ url_for('intro') }}">Introduction</a></li>
+      <li><a href="{{ url_for('dataset') }}">Dataset</a></li>
+      <li><a href="{{ url_for('methodology') }}">Methodology</a></li>
+      <li><a href="{{ url_for('results') }}">Results</a></li>
+      <li><a href="{{ url_for('conclusion') }}">Conclusion</a></li>
+      <li><a href="{{ url_for('references') }}">References</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1>Key Findings</h1>
+      <p>Our comprehensive analysis revealed that while traditional CNNs still maintain their position 
+         as the top performer for image classification tasks, the Convolution Tables approach shows 
+         remarkable promise with only a 2% accuracy gap despite its architectural simplicity. FCNNs, 
+         while less accurate overall, demonstrated competitive performance on certain classes that 
+         have distinctive global features.</p>
+    </section>
+
+    <section>
+      <h1>Model Analysis</h1>
+      <p>The confusion matrices indicate that CNNs excel at capturing local features that distinguish 
+         similar objects, while CTs offer a good balance between global and local feature extraction. 
+         FCNNs struggled with classes that rely heavily on spatial relationships but performed well when 
+         color distribution and overall shape were sufficient discriminators.</p>
+    </section>
+
+    <section>
+      <h1>Future Directions</h1>
+      <p>The promising performance of Convolution Tables suggests several interesting avenues for future research.
+         Hybrid architectures that combine the strengths of CNNs and CTs could potentially achieve better 
+         performance with lower computational costs. Additionally, exploring the application of these models to 
+         other computer vision tasks beyond classification would help establish their broader utility in 
+         the deep learning ecosystem.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Learning Project</p>
+  </footer>
+</body>
+</html>

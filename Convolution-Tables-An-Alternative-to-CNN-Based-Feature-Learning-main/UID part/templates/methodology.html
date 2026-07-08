@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology - Deep Learning Model Comparison</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Deep Learning Model Comparison</h1>
+    <p>CNNs vs FCNNs vs Convolution Tables</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('intro') }}">Introduction</a></li>
+      <li><a href="{{ url_for('dataset') }}">Dataset</a></li>
+      <li><a href="{{ url_for('methodology') }}">Methodology</a></li>
+      <li><a href="{{ url_for('results') }}">Results</a></li>
+      <li><a href="{{ url_for('conclusion') }}">Conclusion</a></li>
+      <li><a href="{{ url_for('references') }}">References</a></li>
+    </ul>
+  </nav>
+  
+
+  <main>
+    <section>
+      <h1>Model Implementation</h1>
+      <p>We implemented three distinct neural network architectures to evaluate their performance on the CIFAR datasets.
+         Each model was designed to represent its category's typical structure and optimization approaches.</p>
+    </section>
+
+    <section>
+      <h1>Model Architectures</h1>
+      <p>Each network was carefully designed to ensure fair comparison while maintaining the essential 
+         characteristics of their respective architectural approaches.</p>
+      
+      <div class="method-img">
+        <img src="static/images/cnn_architecture.jpg" alt="CNN Architecture">
+        <img src="static/images/fcnn_architecture.png" alt="FCNN Architecture">
+        <img src="static/images/ct_architecture.png" alt="CT Architecture">
+      </div>
+    </section>
+
+    <section>
+      <h1>Training Protocol</h1>
+      <p>All models were trained and validated on the CIFAR-10 and CIFAR-100 datasets using identical 
+         preprocessing steps and optimization configurations. Training was conducted for 100 epochs using 
+         stochastic gradient descent with a momentum of 0.9, weight decay of 5e-4, and learning rate of 0.01
+         with a step decay schedule. Data augmentation techniques included random cropping and horizontal flipping.</p>
+      
+      <p>For fair comparison, we ensured that each model had comparable parameter counts and utilized the 
+         same hardware setup for training and inference tests. All experiments were repeated three times with 
+         different random seeds to ensure statistical significance of the results.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Learning Project</p>
+  </footer>
+</body>
+</html>

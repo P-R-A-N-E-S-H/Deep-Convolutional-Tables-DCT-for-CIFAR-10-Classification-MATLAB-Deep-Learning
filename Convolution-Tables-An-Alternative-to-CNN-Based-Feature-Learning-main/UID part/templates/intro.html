@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction - Deep Learning Model Comparison</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Deep Learning Model Comparison</h1>
+    <p>CNNs vs FCNNs vs Convolution Tables</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('intro') }}">Introduction</a></li>
+      <li><a href="{{ url_for('dataset') }}">Dataset</a></li>
+      <li><a href="{{ url_for('methodology') }}">Methodology</a></li>
+      <li><a href="{{ url_for('results') }}">Results</a></li>
+      <li><a href="{{ url_for('conclusion') }}">Conclusion</a></li>
+      <li><a href="{{ url_for('references') }}">References</a></li>
+    </ul>
+  </nav>
+  
+
+  <main>
+    <section>
+      <h1>Project Overview</h1>
+      <p>This deep learning project explores the comparative performance of traditional Convolutional 
+         Neural Networks (CNNs), Fully Connected Neural Networks (FCNNs), and an alternative technique 
+         called Convolution Tables (CTs). We applied all models to the CIFAR-10 and CIFAR-100 datasets 
+         to evaluate their effectiveness in image classification tasks.</p>
+    </section>
+
+    <section>
+      <h1>Research Objectives</h1>
+      <p>The goal of this research is to highlight the strengths and limitations of each method and 
+         investigate whether convolution tables offer a viable, efficient alternative to CNNs in 
+         certain use cases. Our analysis focuses on accuracy, computational efficiency, and model 
+         complexity as key performance indicators.</p>
+    </section>
+
+    <section>
+      <h1>Significance</h1>
+      <p>As deep learning continues to evolve, exploring alternative architectures beyond traditional 
+         CNNs becomes increasingly important. This study contributes to the ongoing discussion about 
+         optimal neural network structures for image classification tasks, particularly in resource-constrained 
+         environments where computational efficiency is crucial.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Learning Project</p>
+  </footer>
+</body>
+</html>
