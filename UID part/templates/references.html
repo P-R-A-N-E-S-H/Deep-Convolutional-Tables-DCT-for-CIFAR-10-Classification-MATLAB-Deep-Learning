@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>References - Deep Learning Model Comparison</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Deep Learning Model Comparison</h1>
+    <p>CNNs vs FCNNs vs Convolution Tables</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('intro') }}">Introduction</a></li>
+      <li><a href="{{ url_for('dataset') }}">Dataset</a></li>
+      <li><a href="{{ url_for('methodology') }}">Methodology</a></li>
+      <li><a href="{{ url_for('results') }}">Results</a></li>
+      <li><a href="{{ url_for('conclusion') }}">Conclusion</a></li>
+      <li><a href="{{ url_for('references') }}">References</a></li>
+    </ul>
+  </nav>
+  
+
+  <main>
+    <section>
+      <h1>References</h1>
+      <p>
+        <strong>Convolutional Tables (CT) Paper:</strong><br>
+        S. Dekel, Y. Keller and A. Bar-Hillel, 
+        "Deep Convolutional Tables: Deep Learning Without Convolutions," 
+        in <em>IEEE Transactions on Neural Networks and Learning Systems</em>, 
+        vol. 35, no. 10, pp. 13658–13670, Oct. 2024.<br>
+        <a href="https://doi.org/10.1109/TNNLS.2023.3270402" target="_blank">
+          DOI: 10.1109/TNNLS.2023.3270402
+        </a>
+      </p>
+
+      <p>
+        <strong>CIFAR Dataset:</strong><br>
+        <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank">
+          https://www.cs.toronto.edu/~kriz/cifar.html
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Learning Project</p>
+  </footer>
+</body>
+</html>

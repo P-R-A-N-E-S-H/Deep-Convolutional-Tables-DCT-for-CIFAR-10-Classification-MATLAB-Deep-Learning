@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Deep Learning Model Comparison</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Deep Learning Model Comparison</h1>
+    <p>CNNs vs FCNNs vs Convolution Tables</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="intro.html">Introduction</a></li>
+      <li><a href="dataset.html">Dataset</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h1>Welcome to Our Deep Learning Project</h1>
+      <p>This research compares the performance of traditional Convolutional Neural Networks (CNNs), 
+         Fully Connected Neural Networks (FCNNs), and an innovative approach using Convolution Tables (CTs) 
+         on the CIFAR-10 and CIFAR-100 datasets.</p>
+    </section>
+
+    <section>
+      <h1>Sample CIFAR-10 Images</h1>
+      <p>The CIFAR-10 dataset consists of 60,000 32x32 color images across 10 classes. 
+         Below are samples from each class used in our experiments.</p>
+      
+      <div class="image-container">
+        <label for = "Airplane"
+        <img src="images/airplane.png" alt="Airplane">
+        <label>
+        <img src="static/images/automobile.png" alt="Automobile">
+        <img src="static/images/bird.png" alt="Bird">
+        <img src="static/images/cat.png" alt="Cat">
+        <img src="static/images/deer.png" alt="Deer">
+        <img src="static/images/dog.png" alt="Dog">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Deep Learning Project</p>
+  </footer>
+</body>
+</html>
