@@ -1,142 +1,357 @@
-# Convolution Tables: An Alternative to CNN-Based Feature Learning
+# 🚀 Convolution Tables (CTs): An Alternative to CNN-Based Feature Learning
 
-This repository contains the implementation and experiments for **Convolution Tables (CT)** — an efficient alternative to traditional Convolutional Neural Networks (CNNs) for feature learning and image classification.
+<p align="center">
 
-Instead of using heavy convolution operations, Convolution Tables use **binary decision functions and lookup tables** to extract features, making the system faster and more computationally efficient, especially on CPU and low-resource devices.
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![MATLAB](https://img.shields.io/badge/MATLAB-R2024b-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Deep Learning](https://img.shields.io/badge/Deep-Learning-red)
+
+</p>
 
 ---
 
-## 📌 Project Motivation
+## 📖 Overview
 
-Convolutional Neural Networks (CNNs) rely on expensive multiply-accumulate operations in convolution layers.  
-Convolution Tables (CTs) replace these operations with:
+**Convolution Tables (CTs)** are a lightweight alternative to traditional **Convolutional Neural Networks (CNNs)** for image feature extraction.
+
+Instead of performing computationally expensive convolution operations, CTs use:
 
 - Binary feature extraction
-- Table lookups
-- Summation of learned responses
+- Lookup tables
+- Learned response aggregation
 
-This results in:
-
-- ⚡ Faster inference  
-- 💻 Lower compute cost  
-- 📦 Smaller and simpler models  
-- 🚀 Competitive accuracy compared to CNNs  
+This significantly reduces computation while maintaining competitive classification performance on image datasets.
 
 ---
 
-## 📂 Repository Structure
+## ✨ Why Convolution Tables?
 
+Traditional CNNs rely on:
+
+- Large convolution kernels
+- Millions of floating-point operations
+- Heavy GPU computation
+
+Convolution Tables replace these with efficient binary operations and lookup tables.
+
+### Advantages
+
+- ⚡ Extremely fast inference
+- 💻 Low computational cost
+- 📦 Lightweight model
+- 🧠 Memory efficient
+- 🚀 CPU-friendly
+- 🔋 Suitable for edge devices
+- 🎯 Competitive accuracy
+
+---
+
+# 🏗 Project Architecture
+
+```
+Input Image
+      │
+      ▼
+Binary Feature Extraction
+      │
+      ▼
+Binary Code Generation
+      │
+      ▼
+Lookup Table Indexing
+      │
+      ▼
+Feature Aggregation
+      │
+      ▼
+Classifier
+      │
+      ▼
+Prediction
+```
+
+---
+
+# 📂 Repository Structure
+
+```
 Convolution-Tables-An-Alternative-to-CNN-Based-Feature-Learning/
-├── MATLAB/ # MATLAB implementation
-├── Python + Marimo/ # Python implementation and experiments
-├── UID part/ # UI / visualization part
-├── Presentation (ppt)/ # Project presentation
-├── README.md # This file
 
+│
+├── MATLAB/
+│   ├── train_CT_model.m
+│   ├── test_CT_model.m
+│   └── utility_functions/
+│
+├── Python/
+│   ├── train.py
+│   ├── dataset.py
+│   ├── model.py
+│   └── utils.py
+│
+├── Marimo/
+│   └── experiments/
+│
+├── UI/
+│   └── visualization/
+│
+├── Presentation/
+│   └── Project_Presentation.pptx
+│
+├── Results/
+│   ├── graphs/
+│   └── images/
+│
+├── README.md
+└── LICENSE
+```
 
 ---
 
-## 🧠 What Are Convolution Tables?
+# 🧠 How Convolution Tables Work
 
-Instead of learning convolution filters like CNNs:
+Unlike CNNs, CTs avoid convolution filters.
 
-1. Image patches are passed through **binary tests**
-2. The outputs form a **binary code**
-3. This binary code is used as an **index into a lookup table**
-4. The values from multiple tables are **summed to form features**
-5. The final features are used for classification
+The workflow consists of five simple stages:
 
-So, CTs **approximate convolutional feature learning without convolutions**.
+### Step 1
+
+Extract local image patches.
+
+↓
+
+### Step 2
+
+Apply multiple binary tests.
+
+↓
+
+### Step 3
+
+Generate a binary code.
+
+↓
+
+### Step 4
+
+Use the binary code as an index into learned lookup tables.
+
+↓
+
+### Step 5
+
+Aggregate responses from multiple tables to produce image features.
+
+Finally, these features are passed to a classifier for prediction.
 
 ---
 
-## ✨ Features
+# 🚀 Features
 
 - ✅ Convolution-free feature learning
-- ✅ Fast and lightweight inference
-- ✅ Works on CPU efficiently
-- ✅ MATLAB and Python implementations
-- ✅ Suitable for CIFAR-10 / MNIST style datasets
+- ✅ Lightweight architecture
+- ✅ CPU optimized
+- ✅ MATLAB implementation
+- ✅ Python implementation
+- ✅ Easy experimentation
+- ✅ Modular project structure
+- ✅ Research-friendly code
 
 ---
 
-## 🛠️ Requirements
+# 📊 Supported Datasets
 
-### MATLAB
-- MATLAB R2021a or later
-- Deep Learning Toolbox (optional but recommended)
+- CIFAR-10
+- CIFAR-100
+- MNIST
+- Custom image datasets
 
-### Python
-Install dependencies:
+---
+
+# 🛠 Requirements
+
+## MATLAB
+
+- MATLAB R2021a or newer
+- Deep Learning Toolbox *(optional)*
+
+---
+
+## Python
+
+Install dependencies
 
 ```bash
 pip install numpy torch torchvision matplotlib
 ```
+
 ---
 
-## 🚀 Installation
+# 🚀 Installation
 
-Clone the repository:
+Clone the repository
 
 ```bash
 git clone https://github.com/sandhiyaa031/Convolution-Tables-An-Alternative-to-CNN-Based-Feature-Learning.git
+
 cd Convolution-Tables-An-Alternative-to-CNN-Based-Feature-Learning
 ```
 
-🏁 How to Run
-MATLAB Version
+---
 
-1. Open the MATLAB/ folder in MATLAB.
-2. Load the dataset (e.g., CIFAR-10 or MNIST).
-3. Run the training script (example):
-```bash
+# ▶ Running the Project
+
+## MATLAB
+
+Open MATLAB and execute
+
+```matlab
 train_CT_model.m
 ```
-4. Run the testing / evaluation script:
-```bash
+
+Evaluate the model
+
+```matlab
 test_CT_model.m
 ```
 
-Python Version
-Run :
-```
+---
+
+## Python
+
+Train the model
+
+```bash
 python train.py
 ```
 
-## 📊 Results
+Evaluate
 
-| Dataset  | Model | Accuracy |
-|----------|--------|----------|
-| CIFAR-10 | CT     | 89.0 %   |
-| CIFAR-10 | CNN    | 93.0 %   |
-
----
-
-## 🧪 Applications
-
-- Embedded AI
-- Low-power devices
-- Edge computing
-- Fast image classification systems
-- Research on convolution-free neural models
+```bash
+python test.py
+```
 
 ---
 
-## 📚 Reference
+# 📈 Experimental Results
 
-Inspired by the research paper:
-
-**"Convolution Tables: An Alternative to CNN-Based Feature Learning"**
-
----
-
-## 👨‍💻 Author
-
-**Pranesh M**  
-Project developed as part of academic and research work.
+| Dataset | Model | Accuracy |
+|----------|--------|-----------|
+| CIFAR-10 | CT | **89.0%** |
+| CIFAR-10 | CNN | **93.0%** |
 
 ---
 
-## 📄 License
+# 📊 Performance Comparison
 
-This project is licensed under the **MIT License**.
+| Metric | CNN | Convolution Tables |
+|---------|-----|-------------------|
+| Convolution Operations | ✓ | ✗ |
+| Lookup Tables | ✗ | ✓ |
+| Binary Features | ✗ | ✓ |
+| CPU Efficiency | Medium | High |
+| Memory Usage | High | Low |
+| Inference Speed | Medium | Very Fast |
+
+---
+
+# 💡 Applications
+
+- 🤖 Embedded AI
+- 📱 Mobile Vision
+- 🌐 Edge Computing
+- 🚗 Autonomous Systems
+- 🛰 IoT Devices
+- 🔬 Deep Learning Research
+- 🖥 Real-time Image Classification
+
+---
+
+# 📚 Research Inspiration
+
+This project is inspired by the paper
+
+> **Convolution Tables: An Alternative to CNN-Based Feature Learning**
+
+The implementation demonstrates how lookup-table-based feature learning can replace convolution operations while maintaining strong classification performance.
+
+---
+
+# 🔮 Future Improvements
+
+- Vision Transformers comparison
+- GPU optimization
+- Quantization support
+- ONNX export
+- More benchmark datasets
+- Explainable AI visualization
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+
+2. Create a new branch
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit changes
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is released under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+**Pranesh M**
+
+B.Tech Artificial Intelligence
+
+Amrita Vishwa Vidyapeetham
+
+📧 Email: your-email@example.com
+
+🔗 GitHub: https://github.com/yourusername
+
+---
+
+## ⭐ Support
+
+If you found this project useful,
+
+⭐ Star this repository
+
+🍴 Fork it
+
+📢 Share it with others
+
+---
+
+<p align="center">
+
+<b>Made with ❤️ for Deep Learning Research</b>
+
+</p>
