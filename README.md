@@ -132,7 +132,7 @@ Inspired by the research paper:
 
 ## 👨‍💻 Author
 
-**Sandhiya**  
+**Pranesh M**  
 Project developed as part of academic and research work.
 
 ---
